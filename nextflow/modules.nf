@@ -1,7 +1,8 @@
 
 // Define each process
 process build_msa {
-    label 'cpu_network'
+    /* label 'cpu_network' */
+    label 'standard'
     // cache 'lenient'
 
     input:
@@ -20,7 +21,8 @@ process build_msa {
 }
 
 process process_msa {
-    label 'cpu'
+    /* label 'cpu' */
+    label 'standard'
     // cache 'lenient'
 
     input:
@@ -51,7 +53,8 @@ process process_msa {
 }
 
 process colabfold {
-    label 'gpu'
+    /* label 'gpu' */
+    label 'standard'
     // cache 'lenient'
 
     input:
@@ -69,10 +72,12 @@ process colabfold {
         --model-type !{model_type} \
         --pair-mode !{pair_mode}
     '''
+    // data is the name of the output directory for colabfold, --data is the directory containing the alphafold parameters
 }
 
 process create_summary_csv {
-    label 'cpu'
+    /* label 'cpu' */
+    label 'standard'
     // cache 'lenient'
     publishDir '.', saveAs: { csv -> "${output_name}_${csv}" } 
 
@@ -81,7 +86,6 @@ process create_summary_csv {
         path pdb_file
         val protein_name
         val fragment_parent_name
-        path experimental_data
         val output_name
 
     output:
@@ -94,13 +98,15 @@ process create_summary_csv {
         --confidence_logs log_file_*.txt \
         --full_protein !{protein_name} \
         --fragment_protein !{fragment_parent_name} \
-        --experimental_data !{experimental_data} \
         --generate_plots
     '''
+        // --experimental_data !{experimental_data} \
 }
 
+// path experimental_data
 process create_summary_csv_fromjson {
-    label 'cpu'
+    /* label 'cpu' */
+    label 'standard'
     // cache 'lenient'
     publishDir '.', saveAs: { csv -> "${output_name}_${csv}" } 
 
@@ -122,7 +128,8 @@ process create_summary_csv_fromjson {
 }
 
 process predict_peaks {
-    label 'cpu_small'
+    /* label 'cpu_small' */
+    label 'standard'
     // cache 'lenient'
     publishDir '.', saveAs: { csv -> "${output_name}_${csv}" } 
 

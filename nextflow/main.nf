@@ -10,6 +10,7 @@ workflow {
         // Serial execution of MSA building is necessary for our HPC environment
         build_msa(file(params.protein_query_seq),true)
         build_msa_fragparent(file(params.fragment_query_seq),build_msa.out.done)
+        // output of process msa is some a3m files that are created (slices of the MSA); it gets piped to flatten and then to colabfold
         process_msa(build_msa_fragparent.out.a3m,
             params.fragment_ntermres_start,
             params.fragment_ntermres_final,
@@ -26,7 +27,6 @@ workflow {
                         colabfold.out.pdb | collect ,
                         protein_name,
                         fragment_parent_name,
-                        params.experimental_data,
                         params.job_name)
         predict_peaks(create_summary_csv.out.csv,
                       params.job_name,
@@ -52,7 +52,7 @@ workflow {
                            colabfold.out.pdb | collect , 
                            protein_name,
                            protein_name,
-                           params.experimental_data,
+                           /* params.experimental_data, */
                            params.job_name)
         predict_peaks(create_summary_csv.out.csv,
                       params.job_name,
@@ -63,3 +63,4 @@ workflow {
                       params.cluster_peaks_frac_overlap)
     }
 }
+// params.experimental_data,

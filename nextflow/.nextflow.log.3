@@ -1,0 +1,101 @@
+Oct-29 19:00:14.532 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /home/jch/tools/FragFold/nextflow/main.nf -w /home/jch/tools/FragFold/example/test/ -c /home/jch/tools/FragFold/nextflow/nextflow.config -params-file /home/jch/tools/FragFold/nextflow/params/ftsZ_monomeric_example.yaml -resume -with-dag dag.html -with-timeline -with-trace -with-report
+Oct-29 19:00:14.606 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.04.4
+Oct-29 19:00:14.621 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/jch/.nextflow/plugins; core-plugins: nf-amazon@2.5.3,nf-azure@1.6.1,nf-cloudcache@0.4.1,nf-codecommit@0.2.1,nf-console@1.1.3,nf-ga4gh@1.3.0,nf-google@1.13.2-patch1,nf-tower@1.9.1,nf-wave@1.4.2-patch1
+Oct-29 19:00:14.630 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Oct-29 19:00:14.630 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Oct-29 19:00:14.633 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Oct-29 19:00:14.642 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Oct-29 19:00:14.659 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/jch/tools/FragFold/nextflow/nextflow.config
+Oct-29 19:00:14.661 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /home/jch/tools/FragFold/nextflow/nextflow.config
+Oct-29 19:00:14.662 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/jch/tools/FragFold/nextflow/nextflow.config
+Oct-29 19:00:14.663 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/jch/tools/FragFold/nextflow/nextflow.config
+Oct-29 19:00:14.682 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/jch/.nextflow/secrets/store.json
+Oct-29 19:00:14.685 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@2063c53e] - activable => nextflow.secret.LocalSecretsProvider@2063c53e
+Oct-29 19:00:14.719 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Oct-29 19:00:15.079 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Oct-29 19:00:15.123 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Oct-29 19:00:15.134 [main] DEBUG nextflow.cli.CmdRun - Launching `/home/jch/tools/FragFold/nextflow/main.nf` [happy_allen] DSL2 - revision: 117ddb7a96
+Oct-29 19:00:15.135 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Oct-29 19:00:15.135 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Oct-29 19:00:15.175 [main] DEBUG nextflow.Session - Session UUID: 84fb678b-7348-4f9b-81a7-4480cd379104
+Oct-29 19:00:15.176 [main] DEBUG nextflow.Session - Run name: happy_allen
+Oct-29 19:00:15.176 [main] DEBUG nextflow.Session - Executor pool size: 64
+Oct-29 19:00:15.182 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Oct-29 19:00:15.186 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=192; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Oct-29 19:00:15.199 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.04.4 build 5917
+  Created: 01-08-2024 07:05 UTC (03:05 EDT)
+  System: Linux 5.15.0-122-generic
+  Runtime: Groovy 4.0.21 on OpenJDK 64-Bit Server VM 11.0.9.1-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 1043798@dave [127.0.1.1]
+  CPUs: 64 - Mem: 251.5 GB (206.7 GB) - Swap: 119.2 GB (119 GB)
+Oct-29 19:00:15.222 [main] DEBUG nextflow.Session - Work-dir: /home/jch/tools/FragFold/example/test [ext2/ext3]
+Oct-29 19:00:15.222 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/jch/tools/FragFold/nextflow/bin
+Oct-29 19:00:15.228 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Oct-29 19:00:15.235 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Oct-29 19:00:15.262 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Oct-29 19:00:15.270 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 65; maxThreads: 1000
+Oct-29 19:00:15.323 [main] DEBUG nextflow.Session - Session start
+Oct-29 19:00:15.325 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/jch/tools/FragFold/nextflow/trace-20241029-68415102.txt
+Oct-29 19:00:15.471 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Oct-29 19:00:15.805 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name build_msa
+Oct-29 19:00:15.818 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Oct-29 19:00:15.819 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-29 19:00:15.822 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Oct-29 19:00:15.826 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=64; memory=251.5 GB; capacity=20; pollInterval=100ms; dumpInterval=5m
+Oct-29 19:00:15.828 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Oct-29 19:00:15.882 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name process_msa
+Oct-29 19:00:15.883 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Oct-29 19:00:15.883 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-29 19:00:15.898 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name colabfold
+Oct-29 19:00:15.899 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Oct-29 19:00:15.899 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-29 19:00:15.910 [main] WARN  nextflow.script.ScriptBinding - Access to undefined parameter `experimental_data` -- Initialise it to a default value eg. `params.experimental_data = some_value`
+Oct-29 19:00:15.914 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name create_summary_csv
+Oct-29 19:00:15.916 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_a119f8099d24d3de: /home/jch/tools/FragFold/nextflow/main.nf
+  Script_c70249a71538659f: /home/jch/tools/FragFold/nextflow/./modules.nf
+Oct-29 19:00:15.916 [main] DEBUG nextflow.Session - Session aborted -- Cause: Process `create_summary_csv` declares 5 input channels but 6 were specified
+Oct-29 19:00:15.928 [main] DEBUG nextflow.Session - The following nodes are still active:
+  [operator] flatten
+  [operator] collect
+  [operator] collect
+
+Oct-29 19:00:15.931 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Oct-29 19:00:15.934 [main] ERROR nextflow.cli.Launcher - Process `create_summary_csv` declares 5 input channels but 6 were specified
+nextflow.exception.ScriptRuntimeException: Process `create_summary_csv` declares 5 input channels but 6 were specified
+	at nextflow.script.ProcessDef.run(ProcessDef.groovy:175)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at nextflow.script.ComponentDef.invoke_o(ComponentDef.groovy:40)
+	at nextflow.script.WorkflowBinding.invokeMethod(WorkflowBinding.groovy:103)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokePogoMethod(InvokerHelper.java:651)
+	at org.codehaus.groovy.runtime.InvokerHelper.invokeMethod(InvokerHelper.java:628)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeOnDelegationObjects(ClosureMetaClass.java:391)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:330)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at Script_a119f8099d24d3de$_runScript_closure1$_closure2.doCall(Script_a119f8099d24d3de:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:343)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:279)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.Closure.call(Closure.java:433)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at nextflow.script.WorkflowDef.run0(WorkflowDef.groovy:204)
+	at nextflow.script.WorkflowDef.run(WorkflowDef.groovy:188)
+	at nextflow.script.BindableDef.invoke_a(BindableDef.groovy:51)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.script.BaseScript.run0(BaseScript.groovy:198)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:321)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:209)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:236)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:243)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:138)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:372)
+	at nextflow.cli.Launcher.run(Launcher.groovy:503)
+	at nextflow.cli.Launcher.main(Launcher.groovy:657)

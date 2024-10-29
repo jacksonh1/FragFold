@@ -1,0 +1,129 @@
+Oct-29 19:03:08.886 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /home/jch/tools/FragFold/nextflow/main.nf -w /home/jch/tools/FragFold/example/test/ -c /home/jch/tools/FragFold/nextflow/nextflow.config -params-file /home/jch/tools/FragFold/nextflow/params/ftsZ_monomeric_example.yaml -resume -with-dag dag.html -with-timeline -with-trace -with-report
+Oct-29 19:03:08.964 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.04.4
+Oct-29 19:03:08.980 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/jch/.nextflow/plugins; core-plugins: nf-amazon@2.5.3,nf-azure@1.6.1,nf-cloudcache@0.4.1,nf-codecommit@0.2.1,nf-console@1.1.3,nf-ga4gh@1.3.0,nf-google@1.13.2-patch1,nf-tower@1.9.1,nf-wave@1.4.2-patch1
+Oct-29 19:03:08.988 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Oct-29 19:03:08.989 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Oct-29 19:03:08.991 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Oct-29 19:03:09.001 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Oct-29 19:03:09.017 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/jch/tools/FragFold/nextflow/nextflow.config
+Oct-29 19:03:09.020 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /home/jch/tools/FragFold/nextflow/nextflow.config
+Oct-29 19:03:09.021 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/jch/tools/FragFold/nextflow/nextflow.config
+Oct-29 19:03:09.022 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/jch/tools/FragFold/nextflow/nextflow.config
+Oct-29 19:03:09.041 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/jch/.nextflow/secrets/store.json
+Oct-29 19:03:09.044 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@2063c53e] - activable => nextflow.secret.LocalSecretsProvider@2063c53e
+Oct-29 19:03:09.078 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Oct-29 19:03:09.447 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Oct-29 19:03:09.491 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Oct-29 19:03:09.503 [main] DEBUG nextflow.cli.CmdRun - Launching `/home/jch/tools/FragFold/nextflow/main.nf` [special_banach] DSL2 - revision: c6a73d212d
+Oct-29 19:03:09.504 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Oct-29 19:03:09.504 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Oct-29 19:03:09.546 [main] DEBUG nextflow.Session - Session UUID: 84fb678b-7348-4f9b-81a7-4480cd379104
+Oct-29 19:03:09.546 [main] DEBUG nextflow.Session - Run name: special_banach
+Oct-29 19:03:09.546 [main] DEBUG nextflow.Session - Executor pool size: 64
+Oct-29 19:03:09.552 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Oct-29 19:03:09.557 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=192; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Oct-29 19:03:09.572 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.04.4 build 5917
+  Created: 01-08-2024 07:05 UTC (03:05 EDT)
+  System: Linux 5.15.0-122-generic
+  Runtime: Groovy 4.0.21 on OpenJDK 64-Bit Server VM 11.0.9.1-internal+0-adhoc..src
+  Encoding: UTF-8 (UTF-8)
+  Process: 1044554@dave [127.0.1.1]
+  CPUs: 64 - Mem: 251.5 GB (206.3 GB) - Swap: 119.2 GB (119 GB)
+Oct-29 19:03:09.593 [main] DEBUG nextflow.Session - Work-dir: /home/jch/tools/FragFold/example/test [ext2/ext3]
+Oct-29 19:03:09.594 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/jch/tools/FragFold/nextflow/bin
+Oct-29 19:03:09.600 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Oct-29 19:03:09.606 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Oct-29 19:03:09.635 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Oct-29 19:03:09.643 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 65; maxThreads: 1000
+Oct-29 19:03:09.710 [main] DEBUG nextflow.Session - Session start
+Oct-29 19:03:09.712 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/jch/tools/FragFold/nextflow/trace-20241029-68589470.txt
+Oct-29 19:03:09.910 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Oct-29 19:03:10.246 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name build_msa
+Oct-29 19:03:10.261 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Oct-29 19:03:10.261 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-29 19:03:10.265 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Oct-29 19:03:10.269 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=64; memory=251.5 GB; capacity=20; pollInterval=100ms; dumpInterval=5m
+Oct-29 19:03:10.271 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Oct-29 19:03:10.328 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name process_msa
+Oct-29 19:03:10.330 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Oct-29 19:03:10.330 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-29 19:03:10.347 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name colabfold
+Oct-29 19:03:10.348 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Oct-29 19:03:10.349 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-29 19:03:10.364 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name create_summary_csv
+Oct-29 19:03:10.365 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Oct-29 19:03:10.365 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-29 19:03:10.374 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name predict_peaks
+Oct-29 19:03:10.376 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Oct-29 19:03:10.376 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-29 19:03:10.379 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: colabfold, build_msa, predict_peaks, create_summary_csv_fromjson, build_msa_fragparent, process_msa, create_summary_csv
+Oct-29 19:03:10.379 [main] DEBUG nextflow.Session - Igniting dataflow network (5)
+Oct-29 19:03:10.380 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > build_msa
+Oct-29 19:03:10.380 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > process_msa
+Oct-29 19:03:10.380 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > colabfold
+Oct-29 19:03:10.381 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > create_summary_csv
+Oct-29 19:03:10.382 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > predict_peaks
+Oct-29 19:03:10.384 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_72098e1989c07f9c: /home/jch/tools/FragFold/nextflow/main.nf
+  Script_c70249a71538659f: /home/jch/tools/FragFold/nextflow/./modules.nf
+Oct-29 19:03:10.384 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Oct-29 19:03:10.384 [main] DEBUG nextflow.Session - Session await
+Oct-29 19:03:10.540 [Actor Thread 11] INFO  nextflow.processor.TaskProcessor - [b7/80af9d] Cached process > build_msa
+Oct-29 19:03:10.588 [Actor Thread 17] INFO  nextflow.processor.TaskProcessor - [12/2959f4] Cached process > process_msa
+Oct-29 19:03:10.620 [Actor Thread 28] INFO  nextflow.processor.TaskProcessor - [08/45e64b] Cached process > colabfold (2)
+Oct-29 19:03:10.620 [Actor Thread 32] INFO  nextflow.processor.TaskProcessor - [b5/8b2e20] Cached process > colabfold (4)
+Oct-29 19:03:10.620 [Actor Thread 26] INFO  nextflow.processor.TaskProcessor - [3b/e2cd51] Cached process > colabfold (1)
+Oct-29 19:03:10.620 [Actor Thread 34] INFO  nextflow.processor.TaskProcessor - [58/535c10] Cached process > colabfold (5)
+Oct-29 19:03:10.621 [Actor Thread 30] INFO  nextflow.processor.TaskProcessor - [a3/a04707] Cached process > colabfold (3)
+Oct-29 19:03:10.686 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-29 19:03:10.688 [Task submitter] INFO  nextflow.Session - [96/2e7182] Submitted process > create_summary_csv
+Oct-29 19:03:12.742 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: create_summary_csv; status: COMPLETED; exit: 0; error: -; workDir: /home/jch/tools/FragFold/example/test/96/2e7182684b87b2f93584c0008d8a69]
+Oct-29 19:03:12.743 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=192; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Oct-29 19:03:12.747 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Process `create_summary_csv` is unable to find [UnixPath]: `/home/jch/tools/FragFold/example/test/96/2e7182684b87b2f93584c0008d8a69/results_expmerge.csv` (pattern: `results_expmerge.csv`)
+Oct-29 19:03:12.750 [TaskFinalizer-1] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=create_summary_csv; work-dir=/home/jch/tools/FragFold/example/test/96/2e7182684b87b2f93584c0008d8a69
+  error [nextflow.exception.MissingFileException]: Missing output file(s) `results_expmerge.csv` expected by process `create_summary_csv`
+Oct-29 19:03:12.773 [TaskFinalizer-1] ERROR nextflow.processor.TaskProcessor - Error executing process > 'create_summary_csv'
+
+Caused by:
+  Missing output file(s) `results_expmerge.csv` expected by process `create_summary_csv`
+
+
+Command executed:
+
+  python /home/jch/tools/FragFold/fragfold/colabfold_process_output.py         --predicted_pdbs ftsZ1copies_10-316_ftsZ_260-289_unrelaxed_rank_001_alphafold2_ptm_model_5_seed_000.pdb ftsZ1copies_10-316_ftsZ_260-289_unrelaxed_rank_002_alphafold2_ptm_model_3_seed_000.pdb ftsZ1copies_10-316_ftsZ_260-289_unrelaxed_rank_003_alphafold2_ptm_model_2_seed_000.pdb ftsZ1copies_10-316_ftsZ_260-289_unrelaxed_rank_004_alphafold2_ptm_model_4_seed_000.pdb ftsZ1copies_10-316_ftsZ_260-289_unrelaxed_rank_005_alphafold2_ptm_model_1_seed_000.pdb ftsZ1copies_10-316_ftsZ_263-292_unrelaxed_rank_001_alphafold2_ptm_model_5_seed_000.pdb ftsZ1copies_10-316_ftsZ_263-292_unrelaxed_rank_002_alphafold2_ptm_model_3_seed_000.pdb ftsZ1copies_10-316_ftsZ_263-292_unrelaxed_rank_003_alphafold2_ptm_model_2_seed_000.pdb ftsZ1copies_10-316_ftsZ_263-292_unrelaxed_rank_004_alphafold2_ptm_model_4_seed_000.pdb ftsZ1copies_10-316_ftsZ_263-292_unrelaxed_rank_005_alphafold2_ptm_model_1_seed_000.pdb ftsZ1copies_10-316_ftsZ_261-290_unrelaxed_rank_001_alphafold2_ptm_model_5_seed_000.pdb ftsZ1copies_10-316_ftsZ_261-290_unrelaxed_rank_002_alphafold2_ptm_model_3_seed_000.pdb ftsZ1copies_10-316_ftsZ_261-290_unrelaxed_rank_003_alphafold2_ptm_model_2_seed_000.pdb ftsZ1copies_10-316_ftsZ_261-290_unrelaxed_rank_004_alphafold2_ptm_model_4_seed_000.pdb ftsZ1copies_10-316_ftsZ_261-290_unrelaxed_rank_005_alphafold2_ptm_model_1_seed_000.pdb ftsZ1copies_10-316_ftsZ_264-293_unrelaxed_rank_001_alphafold2_ptm_model_5_seed_000.pdb ftsZ1copies_10-316_ftsZ_264-293_unrelaxed_rank_002_alphafold2_ptm_model_3_seed_000.pdb ftsZ1copies_10-316_ftsZ_264-293_unrelaxed_rank_003_alphafold2_ptm_model_2_seed_000.pdb ftsZ1copies_10-316_ftsZ_264-293_unrelaxed_rank_004_alphafold2_ptm_model_4_seed_000.pdb ftsZ1copies_10-316_ftsZ_264-293_unrelaxed_rank_005_alphafold2_ptm_model_1_seed_000.pdb ftsZ1copies_10-316_ftsZ_262-291_unrelaxed_rank_001_alphafold2_ptm_model_5_seed_000.pdb ftsZ1copies_10-316_ftsZ_262-291_unrelaxed_rank_002_alphafold2_ptm_model_3_seed_000.pdb ftsZ1copies_10-316_ftsZ_262-291_unrelaxed_rank_003_alphafold2_ptm_model_2_seed_000.pdb ftsZ1copies_10-316_ftsZ_262-291_unrelaxed_rank_004_alphafold2_ptm_model_1_seed_000.pdb ftsZ1copies_10-316_ftsZ_262-291_unrelaxed_rank_005_alphafold2_ptm_model_4_seed_000.pdb         --confidence_logs log_file_*.txt         --full_protein ftsZ_A0A140NFM6         --fragment_protein ftsZ_A0A140NFM6         --generate_plots
+
+Command exit status:
+  0
+
+Command output:
+  Loading data with 64 workers
+  Processing results...
+  5 total paths and 25 lines in the dataframe
+  25 total paths and 25 lines in the dataframe
+  25 lines after merging
+  Combined dataframe with 25 rows
+  Dataframe with 25 entries total
+  Done!
+
+Command error:
+  /home/jch/mambaforge/envs/fragfold/lib/python3.9/site-packages/seaborn/axisgrid.py:123: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all Axes decorations.
+    self._figure.tight_layout(*args, **kwargs)
+  /home/jch/mambaforge/envs/fragfold/lib/python3.9/site-packages/seaborn/axisgrid.py:123: UserWarning: Tight layout not applied. The left and right margins cannot be made large enough to accommodate all Axes decorations.
+    self._figure.tight_layout(*args, **kwargs)
+
+Work dir:
+  /home/jch/tools/FragFold/example/test/96/2e7182684b87b2f93584c0008d8a69
+
+Tip: when you have fixed the problem you can continue the execution adding the option `-resume` to the run command line
+Oct-29 19:03:12.777 [main] DEBUG nextflow.Session - Session await > all processes finished
+Oct-29 19:03:12.782 [TaskFinalizer-1] DEBUG nextflow.Session - Session aborted -- Cause: Missing output file(s) `results_expmerge.csv` expected by process `create_summary_csv`
+Oct-29 19:03:12.793 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Oct-29 19:03:12.794 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Oct-29 19:03:12.802 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=7; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=1.9s; cachedDuration=1h 7m 17s;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=0; ]
+Oct-29 19:03:12.802 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Oct-29 19:03:12.804 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Oct-29 19:03:13.162 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Oct-29 19:03:13.233 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Oct-29 19:03:13.242 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
