@@ -1,4 +1,6 @@
 # From https://github.com/github/gitignore/blob/main/Python.gitignore
+archive/
+*.code-workspace
 
 # Repo specific ignores
 nextflow/practice
