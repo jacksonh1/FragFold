@@ -1,0 +1,8 @@
+(?d)**.DS_Store
+**.pyc
+**.egg-info
+**.egg
+**.db
+**.sqlite3
+(?d)**__pycache__
+**.env
