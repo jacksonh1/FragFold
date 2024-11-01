@@ -1,0 +1,15 @@
+job_name: tnf_test
+heteromeric_mode: true
+protein_query_seq: "/home/jch/Documents/data/fragfold_test/tnfa_test_2024-10-30/TNFa_soluble.fasta"
+fragment_query_seq: "/home/jch/Documents/data/fragfold_test/tnfa_test_2024-10-30/TNR1A_HUMAN_extracellular.fasta"
+fragment_ntermres_start: -1
+fragment_ntermres_final: -1
+fragment_length: 30
+protein_nterm_res: -1
+protein_cterm_res: -1
+protein_copies: 1
+n_contacts: 3
+n_weighted_contacts: 0
+iptm: 0.15
+contact_distance: 0.4
+cluster_peaks_frac_overlap: 0.7

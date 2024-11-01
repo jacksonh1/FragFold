@@ -1,71 +1,122 @@
-Oct-29 18:54:51.591 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /home/jch/tools/FragFold/nextflow/main.nf -w /home/jch/tools/FragFold/example/test/ -c /home/jch/tools/FragFold/nextflow/nextflow.config -params-file /home/jch/tools/FragFold/nextflow/params/ftsZ_monomeric_example.yaml -resume -with-dag dag.html -preview -with-timeline -with-trace -with-report
-Oct-29 18:54:51.662 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.04.4
-Oct-29 18:54:51.676 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/jch/.nextflow/plugins; core-plugins: nf-amazon@2.5.3,nf-azure@1.6.1,nf-cloudcache@0.4.1,nf-codecommit@0.2.1,nf-console@1.1.3,nf-ga4gh@1.3.0,nf-google@1.13.2-patch1,nf-tower@1.9.1,nf-wave@1.4.2-patch1
-Oct-29 18:54:51.683 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Oct-29 18:54:51.684 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Oct-29 18:54:51.686 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
-Oct-29 18:54:51.695 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Oct-29 18:54:51.710 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/jch/tools/FragFold/nextflow/nextflow.config
-Oct-29 18:54:51.712 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /home/jch/tools/FragFold/nextflow/nextflow.config
-Oct-29 18:54:51.714 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/jch/tools/FragFold/nextflow/nextflow.config
-Oct-29 18:54:51.714 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/jch/tools/FragFold/nextflow/nextflow.config
-Oct-29 18:54:51.732 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/jch/.nextflow/secrets/store.json
-Oct-29 18:54:51.734 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@3162743f] - activable => nextflow.secret.LocalSecretsProvider@3162743f
-Oct-29 18:54:51.765 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Oct-29 18:54:52.131 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Oct-29 18:54:52.179 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
-Oct-29 18:54:52.190 [main] DEBUG nextflow.cli.CmdRun - * PREVIEW * null [berserk_kalam] DSL2 - revision: f9582f6eda
-Oct-29 18:54:52.192 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Oct-29 18:54:52.192 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
-Oct-29 18:54:52.237 [main] DEBUG nextflow.Session - Session UUID: 84fb678b-7348-4f9b-81a7-4480cd379104
-Oct-29 18:54:52.238 [main] DEBUG nextflow.Session - Run name: berserk_kalam
-Oct-29 18:54:52.238 [main] DEBUG nextflow.Session - Executor pool size: 64
-Oct-29 18:54:52.244 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
-Oct-29 18:54:52.248 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=192; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
-Oct-29 18:54:52.260 [main] DEBUG nextflow.cli.CmdRun - 
-  Version: 24.04.4 build 5917
-  Created: 01-08-2024 07:05 UTC (03:05 EDT)
+Oct-30 18:40:36.033 [main] DEBUG nextflow.cli.Launcher - $> nextflow run /home/jch/Documents/09-fragfold/FragFold/nextflow/main.nf -w /home/jch/Documents/data/fragfold_test/sample_test -c /home/jch/Documents/09-fragfold/FragFold/nextflow/nextflow.config -params-file /home/jch/Documents/09-fragfold/FragFold/nextflow/params/ftsZ_monomeric_example.yaml -with-dag dag.html -with-timeline -with-trace -with-report -resume -bg
+Oct-30 18:40:36.087 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.10.0
+Oct-30 18:40:36.099 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/jch/.nextflow/plugins; core-plugins: nf-amazon@2.9.0,nf-azure@1.10.1,nf-cloudcache@0.4.2,nf-codecommit@0.2.2,nf-console@1.1.4,nf-google@1.15.2,nf-tower@1.9.3,nf-wave@1.7.2
+Oct-30 18:40:36.108 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Oct-30 18:40:36.108 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Oct-30 18:40:36.110 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.12.0 in 'deployment' mode
+Oct-30 18:40:36.118 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Oct-30 18:40:36.132 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home/jch/Documents/09-fragfold/FragFold/nextflow/nextflow.config
+Oct-30 18:40:36.135 [main] DEBUG nextflow.config.ConfigBuilder - User config file: /home/jch/Documents/09-fragfold/FragFold/nextflow/nextflow.config
+Oct-30 18:40:36.136 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/jch/Documents/09-fragfold/FragFold/nextflow/nextflow.config
+Oct-30 18:40:36.136 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home/jch/Documents/09-fragfold/FragFold/nextflow/nextflow.config
+Oct-30 18:40:36.152 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/jch/.nextflow/secrets/store.json
+Oct-30 18:40:36.154 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@15cea7b0] - activable => nextflow.secret.LocalSecretsProvider@15cea7b0
+Oct-30 18:40:36.182 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Oct-30 18:40:36.491 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Oct-30 18:40:36.541 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Oct-30 18:40:36.551 [main] INFO  nextflow.cli.CmdRun - Launching `/home/jch/Documents/09-fragfold/FragFold/nextflow/main.nf` [mad_aryabhata] DSL2 - revision: 7811881da0
+Oct-30 18:40:36.552 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Oct-30 18:40:36.552 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Oct-30 18:40:36.595 [main] DEBUG nextflow.Session - Session UUID: 40a9afd3-3e1c-4174-871f-69bf630a8a80
+Oct-30 18:40:36.595 [main] DEBUG nextflow.Session - Run name: mad_aryabhata
+Oct-30 18:40:36.595 [main] DEBUG nextflow.Session - Executor pool size: 64
+Oct-30 18:40:36.601 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Oct-30 18:40:36.605 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=192; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Oct-30 18:40:36.619 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.10.0 build 5928
+  Created: 27-10-2024 18:36 UTC (14:36 EDT)
   System: Linux 5.15.0-122-generic
-  Runtime: Groovy 4.0.21 on OpenJDK 64-Bit Server VM 11.0.9.1-internal+0-adhoc..src
+  Runtime: Groovy 4.0.23 on OpenJDK 64-Bit Server VM 11.0.9.1-internal+0-adhoc..src
   Encoding: UTF-8 (UTF-8)
-  Process: 1042789@dave [127.0.1.1]
-  CPUs: 64 - Mem: 251.5 GB (205.5 GB) - Swap: 119.2 GB (119 GB)
-Oct-29 18:54:52.281 [main] DEBUG nextflow.Session - Work-dir: /home/jch/tools/FragFold/example/test [ext2/ext3]
-Oct-29 18:54:52.281 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/jch/tools/FragFold/nextflow/bin
-Oct-29 18:54:52.288 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Oct-29 18:54:52.294 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Oct-29 18:54:52.322 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Oct-29 18:54:52.330 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 65; maxThreads: 1000
-Oct-29 18:54:52.385 [main] DEBUG nextflow.Session - Session start
-Oct-29 18:54:52.387 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/jch/tools/FragFold/nextflow/trace-20241029-68092156.txt
-Oct-29 18:54:52.533 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Oct-29 18:54:52.863 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name build_msa
-Oct-29 18:54:52.879 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
-Oct-29 18:54:52.879 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Oct-29 18:54:52.884 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
-Oct-29 18:54:52.888 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=64; memory=251.5 GB; capacity=20; pollInterval=100ms; dumpInterval=5m
-Oct-29 18:54:52.890 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
-Oct-29 18:54:52.954 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name process_msa
-Oct-29 18:54:52.955 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
-Oct-29 18:54:52.956 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Oct-29 18:54:52.976 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name colabfold
-Oct-29 18:54:52.978 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
-Oct-29 18:54:52.978 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Oct-29 18:54:52.999 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name create_summary_csv
-Oct-29 18:54:53.000 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
-Oct-29 18:54:53.001 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Oct-29 18:54:53.014 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name predict_peaks
-Oct-29 18:54:53.015 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
-Oct-29 18:54:53.015 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
-Oct-29 18:54:53.019 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: colabfold, build_msa, predict_peaks, create_summary_csv_fromjson, build_msa_fragparent, process_msa, create_summary_csv
-Oct-29 18:54:53.019 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
-  Script_3c1168c48538e469: /home/jch/tools/FragFold/nextflow/main.nf
-  Script_f262d3335d5c2ff6: /home/jch/tools/FragFold/nextflow/./modules.nf
-Oct-29 18:54:53.024 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
-Oct-29 18:54:53.024 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
-Oct-29 18:54:53.025 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
-Oct-29 18:54:53.098 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
-Oct-29 18:54:53.330 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
-Oct-29 18:54:53.418 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
-Oct-29 18:54:53.430 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
-Oct-29 18:54:53.430 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
+  Process: 1454174@dave [127.0.1.1]
+  CPUs: 64 - Mem: 251.5 GB (233.6 GB) - Swap: 119.2 GB (119.1 GB)
+Oct-30 18:40:36.635 [main] DEBUG nextflow.Session - Work-dir: /home/jch/Documents/data/fragfold_test/sample_test [ext2/ext3]
+Oct-30 18:40:36.636 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home/jch/Documents/09-fragfold/FragFold/nextflow/bin
+Oct-30 18:40:36.642 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Oct-30 18:40:36.647 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Oct-30 18:40:36.684 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Oct-30 18:40:36.690 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 65; maxThreads: 1000
+Oct-30 18:40:36.753 [main] DEBUG nextflow.Session - Session start
+Oct-30 18:40:36.755 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /home/jch/Documents/09-fragfold/FragFold/nextflow/trace-20241030-67236516.txt
+Oct-30 18:40:36.918 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Oct-30 18:40:37.111 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name build_msa
+Oct-30 18:40:37.125 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Oct-30 18:40:37.125 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-30 18:40:37.129 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Oct-30 18:40:37.133 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=64; memory=251.5 GB; capacity=20; pollInterval=100ms; dumpInterval=5m
+Oct-30 18:40:37.135 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Oct-30 18:40:37.190 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name process_msa
+Oct-30 18:40:37.191 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Oct-30 18:40:37.191 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-30 18:40:37.208 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name colabfold
+Oct-30 18:40:37.209 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Oct-30 18:40:37.209 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-30 18:40:37.222 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name create_summary_csv
+Oct-30 18:40:37.223 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Oct-30 18:40:37.224 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-30 18:40:37.231 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:standard` matches labels `standard` for process with name predict_peaks
+Oct-30 18:40:37.232 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: local
+Oct-30 18:40:37.233 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Oct-30 18:40:37.236 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: colabfold, build_msa, predict_peaks, create_summary_csv_fromjson, build_msa_fragparent, process_msa, create_summary_csv
+Oct-30 18:40:37.236 [main] DEBUG nextflow.Session - Igniting dataflow network (5)
+Oct-30 18:40:37.236 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > build_msa
+Oct-30 18:40:37.237 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > process_msa
+Oct-30 18:40:37.237 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > colabfold
+Oct-30 18:40:37.238 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > create_summary_csv
+Oct-30 18:40:37.239 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > predict_peaks
+Oct-30 18:40:37.242 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_36a3ca5a51e3229f: /home/jch/Documents/09-fragfold/FragFold/nextflow/main.nf
+  Script_c70249a71538659f: /home/jch/Documents/09-fragfold/FragFold/nextflow/./modules.nf
+Oct-30 18:40:37.242 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Oct-30 18:40:37.242 [main] DEBUG nextflow.Session - Session await
+Oct-30 18:40:37.381 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-30 18:40:37.383 [Task submitter] INFO  nextflow.Session - [79/22159c] Submitted process > build_msa
+Oct-30 18:40:42.359 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: build_msa; status: COMPLETED; exit: 0; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/79/22159c031a5aa102bc8642c60e7e18]
+Oct-30 18:40:42.361 [Task monitor] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'TaskFinalizer' minSize=10; maxSize=192; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Oct-30 18:40:42.408 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-30 18:40:42.408 [Task submitter] INFO  nextflow.Session - [df/da4e9f] Submitted process > process_msa
+Oct-30 18:40:43.086 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: process_msa; status: COMPLETED; exit: 0; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/df/da4e9fe9692305958701a2a569c346]
+Oct-30 18:40:43.116 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-30 18:40:43.117 [Task submitter] INFO  nextflow.Session - [32/bd33d2] Submitted process > colabfold (5)
+Oct-30 18:40:43.122 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-30 18:40:43.123 [Task submitter] INFO  nextflow.Session - [06/5c611e] Submitted process > colabfold (1)
+Oct-30 18:40:43.127 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-30 18:40:43.127 [Task submitter] INFO  nextflow.Session - [0a/f6ed5b] Submitted process > colabfold (2)
+Oct-30 18:40:43.139 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-30 18:40:43.140 [Task submitter] INFO  nextflow.Session - [bb/85c711] Submitted process > colabfold (3)
+Oct-30 18:40:43.144 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-30 18:40:43.145 [Task submitter] INFO  nextflow.Session - [d8/1676de] Submitted process > colabfold (4)
+Oct-30 18:45:37.244 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 5 -- submitted tasks are shown below
+~> TaskHandler[id: 7; name: colabfold (5); status: RUNNING; exit: -; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/32/bd33d23d43b63cfe4ef272ef8bf4ec]
+~> TaskHandler[id: 3; name: colabfold (1); status: RUNNING; exit: -; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/06/5c611eb659bb8f150033969f76e2e4]
+~> TaskHandler[id: 4; name: colabfold (2); status: RUNNING; exit: -; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/0a/f6ed5b9e015b9189943e3ca396229b]
+~> TaskHandler[id: 5; name: colabfold (3); status: RUNNING; exit: -; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/bb/85c711432ac6ed132d858cb546e6b8]
+~> TaskHandler[id: 6; name: colabfold (4); status: RUNNING; exit: -; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/d8/1676de4977a10aca7624dcc7a3c6a1]
+Oct-30 18:50:37.306 [Task monitor] DEBUG n.processor.TaskPollingMonitor - !! executor local > tasks to be completed: 5 -- submitted tasks are shown below
+~> TaskHandler[id: 7; name: colabfold (5); status: RUNNING; exit: -; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/32/bd33d23d43b63cfe4ef272ef8bf4ec]
+~> TaskHandler[id: 3; name: colabfold (1); status: RUNNING; exit: -; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/06/5c611eb659bb8f150033969f76e2e4]
+~> TaskHandler[id: 4; name: colabfold (2); status: RUNNING; exit: -; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/0a/f6ed5b9e015b9189943e3ca396229b]
+~> TaskHandler[id: 5; name: colabfold (3); status: RUNNING; exit: -; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/bb/85c711432ac6ed132d858cb546e6b8]
+~> TaskHandler[id: 6; name: colabfold (4); status: RUNNING; exit: -; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/d8/1676de4977a10aca7624dcc7a3c6a1]
+Oct-30 18:54:12.946 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 6; name: colabfold (4); status: COMPLETED; exit: 0; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/d8/1676de4977a10aca7624dcc7a3c6a1]
+Oct-30 18:54:13.021 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: colabfold (1); status: COMPLETED; exit: 0; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/06/5c611eb659bb8f150033969f76e2e4]
+Oct-30 18:54:15.011 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 5; name: colabfold (3); status: COMPLETED; exit: 0; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/bb/85c711432ac6ed132d858cb546e6b8]
+Oct-30 18:54:15.212 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 7; name: colabfold (5); status: COMPLETED; exit: 0; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/32/bd33d23d43b63cfe4ef272ef8bf4ec]
+Oct-30 18:54:15.829 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: colabfold (2); status: COMPLETED; exit: 0; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/0a/f6ed5b9e015b9189943e3ca396229b]
+Oct-30 18:54:15.859 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-30 18:54:15.860 [Task submitter] INFO  nextflow.Session - [0f/18672f] Submitted process > create_summary_csv
+Oct-30 18:54:17.987 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 8; name: create_summary_csv; status: COMPLETED; exit: 0; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/0f/18672f71f9ae940c01b6aa6aa83909]
+Oct-30 18:54:18.010 [Task submitter] DEBUG n.executor.local.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Oct-30 18:54:18.010 [Task submitter] INFO  nextflow.Session - [c6/43ea34] Submitted process > predict_peaks
+Oct-30 18:54:20.790 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 9; name: predict_peaks; status: COMPLETED; exit: 0; error: -; workDir: /home/jch/Documents/data/fragfold_test/sample_test/c6/43ea348c3921837ed96258bcc2382b]
+Oct-30 18:54:20.795 [main] DEBUG nextflow.Session - Session await > all processes finished
+Oct-30 18:54:20.890 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Oct-30 18:54:20.890 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Oct-30 18:54:20.895 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'TaskFinalizer' shutdown completed (hard=false)
+Oct-30 18:54:20.904 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=9; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=1h 7m 46s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=5; peakCpus=5; peakMemory=0; ]
+Oct-30 18:54:20.904 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow completed -- saving trace file
+Oct-30 18:54:20.905 [main] DEBUG nextflow.trace.ReportObserver - Workflow completed -- rendering execution report
+Oct-30 18:54:21.246 [main] DEBUG nextflow.trace.TimelineObserver - Workflow completed -- rendering execution timeline
+Oct-30 18:54:21.319 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Oct-30 18:54:21.325 [main] DEBUG nextflow.util.ThreadPoolManager - Thread pool 'FileTransfer' shutdown completed (hard=false)
+Oct-30 18:54:21.325 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

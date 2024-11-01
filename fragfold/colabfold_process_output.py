@@ -27,8 +27,11 @@ def get_confidence_paths(dir_path):
 
 def load_confidence_data(path):
     # e.g. will match 2024-05-04 12:32:21,588 Query 1/1: ftsZ1copies_10-316_ftsZ_166-195 (length 337)
+    # fragment_name_pat = (
+    #     r"Query 1\/1: ((\D+)(\d)copies_(\d+)-(\d+)_(\D+)_(\d+)-(\d+)) \(length (\d+)\)"
+    # )
     fragment_name_pat = (
-        r"Query 1\/1: ((\D+)(\d)copies_(\d+)-(\d+)_(\D+)_(\d+)-(\d+)) \(length (\d+)\)"
+        r"Query 1\/1: ((.+)(\d)copies_(\d+)-(\d+)_(.+)_(\d+)-(\d+)) \(length (\d+)\)"
     )
 
     # e.g. will match 2023-05-26 20:03:23,691 rank_001_alphafold2_ptm_model_1_seed_000 pLDDT=93 pTM=0.801 ipTM=0.257
@@ -62,7 +65,7 @@ def load_confidence_data(path):
             if match is not None:
                 if fragment_name_match_count == 0:
                     raise ValueError(
-                        "Fragment name should come before the confidence metrics"
+                        f"Fragment name should come before the confidence metrics\nfragment pattern: {fragment_name_pat}\nline:{line}\nfile:{path}"
                     )
                 conf_match_count += 1
                 pred_rank = int(match.group(1))

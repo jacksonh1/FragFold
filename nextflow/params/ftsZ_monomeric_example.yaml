@@ -1,6 +1,6 @@
 job_name: ftsZ_test
 heteromeric_mode: false
-protein_query_seq: /home/jch/tools/FragFold/input/gene_fasta/ftsZ_A0A140NFM6.fasta
+protein_query_seq: /home/jch/Documents/09-fragfold/FragFold/input/gene_fasta/ftsZ_A0A140NFM6.fasta
 fragment_ntermres_start: 260
 fragment_ntermres_final: 264
 fragment_length: 30

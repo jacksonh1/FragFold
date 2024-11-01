@@ -1,0 +1,88 @@
+<!--
+  ~ Copyright 2013-2024, Seqera Labs
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<html>
+<head>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+</head>
+<body>
+<pre class="mermaid" style="text-align: center;">
+flowchart TB
+    subgraph " "
+    v0[" "]
+    v1[" "]
+    v4[" "]
+    v5[" "]
+    v6[" "]
+    v7[" "]
+    v8[" "]
+    v9[" "]
+    v15[" "]
+    v16[" "]
+    v17[" "]
+    v19[" "]
+    v20[" "]
+    v21[" "]
+    v22[" "]
+    v23[" "]
+    v24[" "]
+    end
+    v2([build_msa])
+    subgraph " "
+    v3[" "]
+    v26[" "]
+    end
+    v10([process_msa])
+    v11([flatten])
+    v12([colabfold])
+    v13([collect])
+    v14([collect])
+    v18([create_summary_csv])
+    v25([predict_peaks])
+    v0 -->|query_seq| v2
+    v1 -->|ready| v2
+    v2 -->|protein_a3m_input| v10
+    v2 --> v3
+    v4 -->|fragment_ntermres_start| v10
+    v5 -->|fragment_ntermres_final| v10
+    v6 -->|fragment_length| v10
+    v7 -->|protein_ntermres| v10
+    v8 -->|protein_ctermres| v10
+    v9 -->|protein_copies| v10
+    v10 --> v11
+    v11 --> v12
+    v12 --> v13
+    v12 --> v14
+    v13 --> v18
+    v14 --> v18
+    v15 -->|protein_name| v18
+    v16 -->|fragment_parent_name| v18
+    v17 -->|output_name| v18
+    v18 --> v25
+    v19 -->|output_name| v25
+    v20 -->|n_contacts| v25
+    v21 -->|n_weighted_contacts| v25
+    v22 -->|iptm| v25
+    v23 -->|contact_distance| v25
+    v24 -->|cluster_peaks_frac_overlap| v25
+    v25 --> v26
+
+</pre>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, maxTextSize: Number.MAX_SAFE_INTEGER, maxEdges: Number.MAX_SAFE_INTEGER });
+</script>
+</body>
+</html>
